@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PNG to JPG Converter</title>
+  <!-- CSS লিংক -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="converter-card">
+    <h1 class="title">Image Converter</h1>
+    <p class="subtitle">Convert PNG to JPG easily</p>
+
+    <!-- আপলোড সেকশন -->
+    <div class="upload-section">
+      <input type="file" id="imageInput" accept="image/png">
+      <label for="imageInput" class="btn btn-upload">📁 Select PNG Image</label>
+      <p id="fileNameText" class="file-name">No image selected</p>
+      
+      <!-- সিলেক্ট করা মূল ছবির প্রিভিউ -->
+      <div id="originalPreviewContainer" class="preview-box hidden">
+        <p class="preview-label">Selected Image Preview:</p>
+        <img id="originalPreview" alt="PNG Preview">
+      </div>
+    </div>
+
+    <!-- সাইজ ও কোয়ালিটি সেটিংস -->
+    <div class="settings-section">
+      <h3>Image Settings</h3>
+      
+      <div class="input-group">
+        <label for="widthInput">Width (px):</label>
+        <input type="number" id="widthInput" placeholder="Width">
+      </div>
+
+      <div class="input-group">
+        <label for="heightInput">Height (px):</label>
+        <input type="number" id="heightInput" placeholder="Height">
+      </div>
+
+      <div class="input-group">
+        <label for="qualityInput">Quality (10% - 100%):</label>
+        <input type="range" id="qualityInput" min="0.1" max="1" step="0.1" value="0.9">
+      </div>
+    </div>
+
+    <!-- কনভার্ট বাটন -->
+    <button id="convertBtn" class="btn btn-convert" disabled>⚡ Convert to JPG</button>
+
+    <!-- কনভার্ট হওয়া JPG ছবির সেকশন এবং প্রিভিউ -->
+    <div id="convertedSection" class="converted-section hidden">
+      <p class="preview-label">Converted JPG Preview:</p>
+      <img id="convertedPreview" alt="JPG Preview">
+
+      <a id="downloadLink" class="btn btn-download" download="converted-image.jpg">
+        ⬇️ Download JPG Image
+      </a>
+    </div>
+
+    <!-- ব্যাকগ্রাউন্ড ক্যানভাস (আড়াল করা) -->
+    <canvas id="imageCanvas" style="display: none;"></canvas>
+  </div>
+
+  <!-- JavaScript লিংক -->
+  <script src="script.js"></script>
+</body>
+</html>

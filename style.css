@@ -1,0 +1,164 @@
+/* ডার্ক থিম ব্যাকগ্রাউন্ড */
+body {
+  margin: 0;
+  padding: 20px 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0b0c10;
+  background-image: radial-gradient(circle at 20% 20%, #20002c 0%, transparent 40%),
+                    radial-gradient(circle at 80% 80%, #4d0026 0%, transparent 40%);
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* মেইন কার্ড কন্টেইনার */
+.converter-card {
+  background-color: #12131c;
+  border: 1px solid #2a2d3d;
+  border-radius: 16px;
+  padding: 25px;
+  width: 90%;
+  max-width: 420px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.title {
+  margin: 0 0 5px 0;
+  font-size: 26px;
+  color: #ff007f; /* Neon Pink */
+}
+
+.subtitle {
+  margin: 0 0 20px 0;
+  color: #00d4ff; /* Sky Blue */
+  font-size: 14px;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.file-name {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #a0a5ba;
+  word-break: break-all;
+}
+
+/* বাটন ডিজাইন */
+.btn {
+  display: block;
+  width: 100%;
+  padding: 12px 0;
+  margin-top: 15px;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  box-sizing: border-box;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-upload {
+  background-color: #4E1F6E; /* Purple */
+  color: #ffffff;
+}
+
+.btn-convert {
+  background-color: #C13383; /* Pink */
+  color: #ffffff;
+}
+
+.btn-convert:disabled {
+  background-color: #4a4a5a;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-download {
+  background-color: #8494FF; /* lavender */
+  color: #000000;
+}
+
+/* সেটিংস সেকশন */
+.settings-section {
+  background-color: #211832; /* Dark Purple */ 
+  padding: 15px;
+  border-radius: 10px;
+  margin: 20px 0;
+  text-align: left;
+}
+
+.settings-section h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 15px;
+  color: #00d4ff;
+}
+
+.input-group {
+  margin-bottom: 10px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 4px;
+  color: #c5c6c7;
+}
+
+.input-group input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  background-color: #0b0c10;
+  border: 1px solid #333644;
+  border-radius: 5px;
+  color: #ffffff;
+}
+
+.input-group input[type="range"] {
+  width: 100%;
+}
+
+/* ছবি প্রিভিউ স্টাইল */
+.preview-box {
+  margin-top: 12px;
+  padding: 10px;
+  background: #211832;
+  border-radius: 8px;
+}
+
+.preview-label {
+  font-size: 12px;
+  color: #00d4ff;
+  margin: 0 0 8px 0;
+}
+
+.preview-box img,
+.converted-section img {
+  max-width: 100%;
+  max-height: 150px;
+  border-radius: 6px;
+  border: 1px solid #333644;
+  object-fit: contain;
+}
+
+.converted-section {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px dashed #2a2d3d;
+}
+
+.hidden {
+  display: none;
+}
